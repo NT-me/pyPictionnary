@@ -37,6 +37,8 @@ class pyPict(QtWidgets.QMainWindow):
 
     def openListe(self):
         os.system('mousepad listeMots.txt')
+        self.listeMots = TxtToList("listeMots.txt")
+		
 
 
 if __name__ == "__main__":
