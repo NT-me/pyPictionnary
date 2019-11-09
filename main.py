@@ -28,11 +28,15 @@ class pyPict(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.listeMots = TxtToList("listeMots.txt")
         self.ui.Mot_Suivant.clicked.connect(self.displayWord)
+        self.ui.edit_List.clicked.connect(self.openListe)
 
     def displayWord(self):
         self.ui.motShower.clear()
 
         self.ui.motShower.append(random.choice(self.listeMots))
+
+    def openListe(self):
+        os.system('mousepad listeMots.txt')
 
 
 if __name__ == "__main__":
